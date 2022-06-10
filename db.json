@@ -1,0 +1,42 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "firstname": "somu",
+      "lastname": "ddd",
+      "birthdate": "2022-06-03",
+      "gender": "m",
+      "education": "Diploma",
+      "company": "ddfd",
+      "jobExperience": 2,
+      "salary": 44,
+      "profile": "DSC_0355.JPG",
+      "id": 2
+    },
+    {
+      "firstname": "sneha",
+      "lastname": "jak",
+      "birthdate": "2022-06-03",
+      "gender": "m",
+      "education": "graduate",
+      "company": "sdsdsad",
+      "jobExperience": 2,
+      "salary": 5,
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
