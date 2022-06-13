@@ -4,29 +4,38 @@
 <app-header></app-header>
 
  <!-- MAIN CONTENT -->
-<main>
+<main class="black-borde">
 <!-- ------TOOLBAR TO ADD AND SERCACH EMPLOYEE------ -->
 <marquee  behavior="scroll"scrollamount="7">Welcome To Employee Management App</marquee>
 <div class="toolbar">
   <div class="add-empbutton">
-    <button type="button" class="btn btn-outline-success btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD-EMPLOYEE</button>
+    <button type="button" class="btn btn-outline-success btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" #addEmployeeButton>ADD-EMPLOYEE</button>
     </div>
 
     <div class="serachemployee">
-      <input type="search" class="form-control" placeholder="Search Employee">
+      <input type="search" class="form-control" placeholder="Search Employee"(input)="searchEmployees(searchInput.value)" #searchInput>
     </div>
   </div>
   <!-- AREA TO DISPLAY ALL THE EMPLOYEES -->
-  <div class="employees black-border ">
+  <div class="employees  ">
 
-    <div class="row mt-5">
+    <div class="row mt-5"*ngIf="employees.length == 0">
       <div class="col text-center">
         <span class="text-secondary fs-2 fw-bold fst-italic">There are No Employees Added!</span>
       </div>
     </div>
+    
+    <div class="row mt-4" *ngFor="let employee of employeesToDisplay; let ei = index;">
+      <div class="col">
+        <app-employee [employee]="employee"(onRemoveEmployee)="removeEmployee($event)"
+        (onEditEmployee)="editEmployee($event)">
+      </app-employee>
+        </div>
+        </div>
+
     </div>
 </main>
-<router-outlet></router-outlet> 
+<!-- <router-outlet></router-outlet>  -->
 </div>
 
 

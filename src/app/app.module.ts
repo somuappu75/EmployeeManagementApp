@@ -10,6 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { AboutComponent } from './components/about/about.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EmployeeComponent } from './components/employee/employee.component';
 
 
 
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HeaderComponent,
     AboutComponent,
+    EmployeeComponent,
   ],
   imports: [
     BrowserModule,
